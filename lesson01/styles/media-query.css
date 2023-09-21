@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 255, 0.3);
+    padding: 20px;
+    background-color: #e0ebf5; /* Blueish background color */
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    padding: 15px;
+    background-color: #fff; /* White background color */
+}
+
+@media screen and (min-width: 500px) {
+    header {
+        background-color: #000;
+        color: #fff;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr; /* Two columns of equal size */
+    }
+}
