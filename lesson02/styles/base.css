@@ -1,0 +1,66 @@
+/* CSS Reset or Normalize */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif; /* You can choose any font from Google Fonts */
+}
+
+/* Page Layout using CSS Grid */
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Default: 3 columns */
+}
+
+/* Responsive Layout using Media Queries */
+@media (max-width: 767px) {
+    body {
+        grid-template-columns: 1fr; /* On small screens, 1 column */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        grid-template-columns: 1fr 1fr; /* On medium screens, 2 columns */
+    }
+}
+
+/* Header and Footer Styling */
+header, footer {
+    grid-column: 1 / -1; 
+    background-color: #333; 
+    color: white; 
+    padding: 10px;
+    text-align: center;
+}
+
+/* Design Principle Styling */
+.design-principle, .RuleofThirds, .Contrast {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Screenshot Styling */
+.screenshot img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text Styles */
+p {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #007BFF; /* Blue color for h2 headings */
+}
