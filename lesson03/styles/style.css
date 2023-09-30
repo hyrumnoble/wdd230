@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  #site-name {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  #site-name h1 {
+    color: #3498db;
+  }
+  
+  #site-purpose {
+    margin-top: 20px;
+  }
+  
+  #scenarios {
+    margin-top: 20px;
+  }
+  
+  #color-schema, #typography, #wireframe {
+    margin-top: 20px;
+  }
+  
+  .color-swatch {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .color-swatch:nth-child(odd) {
+    background-color: #3498db; /* Primary Color */
+  }
+  
+  .color-swatch:nth-child(even) {
+    background-color: #2ecc71; /* Secondary Color */
+  }
+img{
+    width: 300px;
+    height: 450px;
+}  
