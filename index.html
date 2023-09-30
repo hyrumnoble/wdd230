@@ -18,9 +18,15 @@
   <header>
     <img src="images/20201130_151657.jpg" alt="Profile Image">
     <h1>Hyrum Heber Noble</h1>
+    <div id="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div id="close-menu" onclick="toggleMenu()">X</div>
   </header>
   
-  <nav>
+  <nav id="navMenu">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="chamber/siteplan.html">Site Plan</a></li>
@@ -51,6 +57,7 @@
       <h3>Information</h3>
       <p>Weather: [Weather information]</p>
       <p>Visits: [Number of visits]</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55785.2013189676!2d14.526488660745546!3d-22.654632918388533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c7658ef0b44d78f%3A0xde9e043bc3383c4c!2sSwakopmund!5e0!3m2!1sen!2sna!4v1696076220068!5m2!1sen!2sna" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 
@@ -60,7 +67,7 @@
     <p id="lastModified"></p>
   </footer>
 
-  <script src="styles/base.css"></script>
+  <script src="scripts/menu.js"></script>
   <script src="scripts/getdates.js"></script>
 </body>
 </html>

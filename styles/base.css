@@ -1,31 +1,38 @@
-/* Import Google Fonts */
+/* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Rock+Salt&display=swap');
 
-/* base.css */
+/* Color variables */
+:root {
+    --primary-bg-color: #415A77; /* Define your primary background color */
+    --secondary-bg-color: #f0f0f0; /* Define your secondary background color */
+    --text-color: #333; /* Define your text color */
+    --accent-color: #6C0E23; /* Define your accent color */
+}
 
+/* Base styles */
 body {
-    font-family: "Roboto Slab", sans-serif; 
+    font-family: "Roboto Slab", sans-serif;
     font-size: 16px;
-    background-color: #f0f0f0; 
-    color: #333; 
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
 }
 
 main {
-    width: 80%; 
-    margin: 0 auto; 
+    width: 80%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
 }
 
 .card {
-    border: 1px solid #6C0E23;
+    border: 1px solid var(--accent-color);
     padding: 20px;
 }
 
 .card h3 {
-    background-color: #415A77;
-    font-family: "Rock Salt", cursive; 
-    color: #f0f0f0;
+    background-color: var(--primary-bg-color);
+    font-family: "Rock Salt", cursive;
+    color: var(--secondary-bg-color);
     border-radius: 35px;
     padding: 20px;
 }
@@ -36,8 +43,8 @@ main {
 
 header {
     margin: 0;
-    font-family: "Rock Salt", cursive; 
-    background-color: #415A77;
+    font-family: "Rock Salt", cursive;
+    background-color: var(--primary-bg-color);
     color: #fff;
     display: flex;
     align-items: center;
@@ -52,7 +59,7 @@ header img {
 }
 
 nav {
-    background-color: black; 
+    background-color: black;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -60,7 +67,7 @@ nav {
 
 nav ul {
     padding: 20px;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -72,19 +79,19 @@ nav li {
 }
 
 nav a {
-    font-family: "Rock Salt", cursive; 
-    color: #f0f0f0; 
+    font-family: "Rock Salt", cursive;
+    color: var(--secondary-bg-color);
     text-decoration: none;
 }
 
 nav a:hover {
-    color: #6C0E23; /* Replace with your chosen link hover color */
+    color: var(--accent-color);
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #415A77;
+    background-color: var(--primary-bg-color);
 }
 
 footer img {
@@ -95,5 +102,51 @@ footer img {
 #lastModified {
     font-style: italic;
     font-size: 14px;
-    color: #fffefe;
+    color: var(--secondary-bg-color);
 }
+
+#hamburger-menu {
+    display: none;
+  }
+#hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+#hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+#hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#close-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    #hamburger-menu {
+        display: block;
+    }
+    nav ul {
+        display: none;
+      }
+    nav.active ul {
+        display: flex;
+        flex-direction: column;
+      }
+    #close-menu {
+        display: block;
+      }
+    
+    }
