@@ -28,28 +28,54 @@
   <main>
     <section class="hero">
       <img src="images/R.jpeg" alt="Hero Image">
+      <a href="index.html" class="cta-button" id="join-button">Join Now</a>
     </section>
 
     <section class="call-to-action">
       <h2>Join the Chamber of Commerce</h2>
       <p>Discover the benefits of being a member.</p>
-      <a href="#" class="cta-button">Join Now</a>
     </section>
 
-    <section class="current-events">
-      <h2>Current Events</h2>
-      <p>Stay updated with the latest happenings.</p>
-    </section>
+    <section class="events-and-weather">
+      <section class="event-details">
+        <h2>FNB Trackday Event</h2>
+        <p>Join us for an exciting day at the FNB Trackday event. Experience thrilling races and engage with fellow motorsport enthusiasts.</p>
+        <a href="https://www.raceentry.com/fnb-fall-fun-fest-runwalk/race-information" class="cta-button">Join Us</a>
+      </section>
 
-    <section class="weather-card">
-      <h2>Weather</h2>
-      <p>Check the current weather in Swakopmund.</p>
-      <div class="weatherWidget" ></div>
+      <section class="weather-card">
+        <h2>Weather</h2>
+        <p>Check the current weather in Swakopmund.</p>
+        <div class="weatherWidget"></div>
+      </section>
     </section>
-
-    <section class="company-spotlights">
-      <h2>Company Spotlights</h2>
-    </section>
+    <div class="success-story">
+      <h2>Nedbank Success Story</h2>
+      <p>Discover how Nedbank has been a key player in supporting local businesses and fostering economic growth in Swakopmund. Their financial solutions and dedication have significantly impacted the community.</p>
+      <div class="business-postings-container">
+        <h2>Featured Businesses</h2>
+        <div class="business-postings">
+          <div class="business-posting" style="background-image: url('https://images.myguide-cdn.com/namibia/companies/swakopmund-guided-local-highlights-tour/large/swakopmund-guided-local-highlights-tour-621893.jpg');">
+            <h3>4WD Tours - Explore Swakopmund</h3>
+            <p>Experience the beauty of Swakopmund and its stunning tourist attractions with our guided 4WD tours. We offer thrilling adventures to famous landmarks, ensuring an unforgettable exploration of the area.</p>
+            <a href="https://www.viator.com/tours/Swakopmund/NAMIB-DESERT-TOURS-Full-Day-and-Half-Day-Tours-from-Swakopmund-Namibia/d5541-101498P1?m=33953&supag=1240249278274158&supsc=dat-2329315383530665&supai=77515664087472&supdv=c&supnt=nt:o&suplp=151439&supli=126&supti=dat-2329315383530665&tsem=true&supci=dat-2329315383530665&supkw=4wd%20tours%20namibia&msclkid=b0b003d7fbea15a1396666fadb76ae9c" class="cta-button">Visit the Website</a>
+          </div>
+      
+          <div class="business-posting" style="background-image: url('https://th.bing.com/th/id/OIP.wCaWSb88EQA4pfWudZn8tQHaFj?pid=ImgDet&rs=1');">
+            <h3>Transportation Services</h3>
+            <p>Get reliable transport information and services to travel around Swakopmund. Our company ensures a safe and convenient journey for both residents and visitors.</p>
+            <a href="https://namibiashuttle.com/" class="cta-button">Visit the Website</a>
+          </div>
+      
+          <div class="business-posting" style="background-image: url('https://th.bing.com/th/id/R.b49b75c160c57b8bd2e06d0b88b27869?rik=h6XIQfO3cpyZFQ&pid=ImgRaw&r=0');">
+            <h3>Takealot.com</h3>
+            <p>Explore a wide range of products and enjoy online shopping convenience with Takealot.com. Discover amazing deals and have your favorite items delivered right to your doorstep.</p>
+            <a href="https://www.takealot.com/" class="cta-button">Visit the Website</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -73,8 +99,22 @@
       <p><a href="../lesson03/chamber_siteplan.html">Site Plan</a></p>
     </div>
   </footer>
-  <script src= "scripts/getdates.js"></script>
-  <script src= "scripts/weather.js"></script>
+  <div class="dark-mode-switch">
+    <label class="dark-mode-label">
+      <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox">
+      <span class="dark-mode-slider"></span>
+    </label>
+  </div>
+  <script src="scripts/getdates.js"></script>
+  <script src="scripts/weather.js"></script>
+
+  <script>
+    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
+
+    darkModeCheckbox.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode', darkModeCheckbox.checked);
+    });
+  </script>
 
 </body>
 </html>
