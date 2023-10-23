@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-    <img src="images/20201130_151657.jpg" alt="Profile Image">
+    <img src="images/20201130_151657.webp" alt="Profile Image">
     <h1>Hyrum Heber Noble</h1>
     <div id="hamburger-menu" onclick="toggleMenu()">
       <div class="bar"></div>
@@ -37,8 +37,18 @@
   </nav>
 
   <main>
-    <h2>WDD 230: Web Frontend Development</h2>
-    
+    <div class="hero">
+      <picture>
+        <source srcset="images/small-hero.webp" media="(max-width: 320px)">
+        <source srcset="images/small-hero.webp" media="(max-width: 400px)">
+        <source srcset="images/medium-hero.webp" media="(max-width: 800px)">
+        <img src="images/large-hero.webp" alt="Description of the image" width="1200" height="750">
+      </picture>
+      </div>
+      <div class="overlay">
+        <h1>Curitiba Brazil Temple</h1>
+      </div>
+      <h2>WDD 230: Web Frontend Development</h2>
     <section class="card">
       <h3>Learning Activities</h3>
       <ul>
