@@ -17,24 +17,23 @@ window.weatherWidgetConfig.push({
     (d.head || d.body).appendChild(s);
 })();
 function calculateWindChill(temperature, windSpeed) {
-    
-    if (temperature <= 50 && windSpeed > 3.0) {
+    if (temperature <= 10 && windSpeed > 4.8) {
       const windChill = calculateWindChillIndex(temperature, windSpeed);
-      return `Wind Chill: ${windChill.toFixed(1)} °F`;
+      return `Wind Chill: ${windChill.toFixed(1)} °C`;
     } else {
       return "N/A";
     }
   }
   
   function calculateWindChillIndex(temperature, windSpeed) {
-    const windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+    const windChill = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
     return windChill;
   }
-  
-  
-  const temperature = 32; 
-  const windSpeed = 10;  
-  const windChillValue = calculateWindChill(temperature, windSpeed);
-  
 
+  const temperature = 10;   
+  const windSpeed = 10;      
+  
+  const windChillValue = calculateWindChill(temperature, windSpeed);
+
+  
   document.querySelector('.wind-chill').textContent = windChillValue;
