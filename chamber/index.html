@@ -27,7 +27,15 @@
 
   <main>
     <section class="hero">
-      <img src="images/R.jpeg" alt="Hero Image">
+      <img
+        srcset="images/hero-small.webp 500w,
+                images/hero-medium.webp 1000w,
+                images/hero-large.webp 1500w"
+        sizes="(max-width: 500px) 500px,
+               (max-width: 1000px) 1000px,
+               1500px"
+        src="images/hero-large.webp"
+        alt="Hero Image">
       <a href="index.html" class="cta-button" id="join-button">Join Now</a>
     </section>
 
@@ -46,6 +54,7 @@
       <section class="weather-card">
         <h2>Weather</h2>
         <p>Check the current weather in Swakopmund.</p>
+        <p class="wind-chill">Wind Chill: Calculating...</p>
         <div class="weatherWidget"></div>
       </section>
     </section>
