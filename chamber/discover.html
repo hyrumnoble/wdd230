@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Swakopmund Chamber of Commerce - Supporting businesses in Swakopmund.">
+  <meta name="author" content="Hyrum Noble">
+  <title>Swakopmund Chamber of Commerce</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Swakopmund Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="path/to/social-image.jpg">
+  <meta property="og:url" content="https://www.example.com">
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Swakopmund Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">discover</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="sidebar">
+        <div id="visit-message"></div>
+      
+        <div class="tourism-info">
+          <h2>Tourism in Swakopmund</h2>
+          <p>Welcome to Swakopmund, a coastal city offering a variety of attractions and activities for tourists:</p>
+          <ul>
+            <li>Exploration of Namib Desert</li>
+            <li>Adventure activities (sandboarding, quad biking)</li>
+            <li>Historical sites (Swakopmund Museum, Woermannhaus)</li>
+            <li>Beach relaxation and water sports</li>
+          </ul>
+        </div>
+      </aside>
+    <section class="gallery">
+      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/278794-swakopmund-architecture.jpg" alt="Local Photo 1">
+      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/Bnb.jpeg" alt="Local Photo 1">
+      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/hotel.jpeg" alt="Local Photo 1">
+      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/swakopmund-adventure.jpg" alt="Local Photo 1">
+      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/OIP.jpeg" alt="Local Photo 1">
+      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/go338217.jpg" alt="Local Photo 1">
+    </section>
+  </main>
+  
+
+  <footer>
+    <div class="social">
+      <a href="https://facebook.com" target= "_blank">
+          <img src="images/facebook.png" alt="fb icon">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+          <img src="images/twitter.png" alt="twitter icon">
+      </a>
+      <a href="https://instagram.com" target="_blank"> 
+          <img src="images/instagram.png" alt="instagram icon">
+      </a>
+    </div>
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+    </div>
+    <div class="development-info">
+      <p>Developed by Hyrum Noble for WDD 230</p>
+      <p>Last modified: <span id="last-modified-date"></span></p>
+      <p><a href="../lesson03/chamber_siteplan.html">Site Plan</a></p>
+    </div>
+  </footer>
+  <div class="dark-mode-switch">
+    <label class="dark-mode-label">
+      <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox">
+      <span class="dark-mode-slider"></span>
+    </label>
+  </div>
+  <script src="scripts/getdates.js"></script>
+  <script src="scripts/weather.js"></script>
+
+  <script>
+    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
+
+    darkModeCheckbox.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode', darkModeCheckbox.checked);
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const lastVisit = localStorage.getItem("lastVisit");
+        const currentDate = Date.now();
+        const oneDay = 24 * 60 * 60 * 1000; // milliseconds in a day
+      
+        if (!lastVisit) {
+          localStorage.setItem("lastVisit", currentDate);
+          displayMessage("Welcome! Let us know if you have any questions.");
+        } else {
+          const daysSinceLastVisit = Math.round((currentDate - lastVisit) / oneDay);
+      
+          if (daysSinceLastVisit < 1) {
+            displayMessage("Back so soon! Awesome!");
+          } else {
+            const message = daysSinceLastVisit === 1 ? "day" : "days";
+            displayMessage(`You last visited ${daysSinceLastVisit} ${message} ago.`);
+          }
+      
+          localStorage.setItem("lastVisit", currentDate);
+        }
+      });
+      
+      function displayMessage(message) {
+        // Replace 'message' with the message element in the sidebar
+        const messageElement = document.getElementById("visit-message");
+        messageElement.textContent = message;
+      }
+  </script>
+  
+
+</body>
+</html>
