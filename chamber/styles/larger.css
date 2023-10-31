@@ -1,0 +1,261 @@
+html, body, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  
+  header {
+    background-color: #415A77;
+    color: #9CC5A1;
+    padding: 10px 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #0D1B2A;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #6C0E23;
+  }
+  
+  .hamburger-menu {
+    display: none;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 700px;
+    display: block;
+    position: relative;
+  }
+  
+  #join-button {
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    background-color: #6C0E23;
+    color: #9CC5A1;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .events-and-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .event-details {
+    max-width: 600px;
+    padding: 20px;
+    color: #0D1B2A;
+    background-image: url('https://th.bing.com/th/id/OIP.1sMkaDvkeCU9ZONiNJ6fUAHaEo?pid=ImgDet&rs=1');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  
+  .event-details h2, .event-details p {
+    color: #0D1B2A;
+  }
+  
+  .business-postings-container {
+    margin-top: 20px;
+  }
+  
+  .business-postings {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  .business-posting {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #9CC5A1;
+    background-size: cover;
+    background-position: center;
+    color: #0D1B2A;
+  
+  }
+  
+  .business-posting h3, .business-posting p {
+    color: #0D1B2A;
+  }
+  
+  .business-posting a.cta-button {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #f0f0f0;
+    text-decoration: none;
+    border: 1px solid #6C0E23;
+    padding: 5px 10px;
+    background-color: #6C0E23;
+  }
+  
+  .business-posting a.cta-button:hover {
+    background-color: rgba(53, 6, 163, 0.2);
+  }
+  
+  .success-story {
+    padding: 20px;
+    border: 1px solid #415A77;
+    margin-top: 20px;
+    background-color: #0D1B2A;
+  }
+  
+  .success-story h2 {
+    color: #c5d0dd;
+  }
+  
+  .success-story p {
+    color: #e6e0e0;
+  }
+  
+  footer {
+    background-color: #415A77;
+    color: #9CC5A1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social img {
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+  }
+  
+  .contact-info {
+    margin-top: 10px;
+  }
+  
+  .development-info {
+    margin-top: 10px;
+  }
+  
+  .development-info a {
+    color: #0D1B2A;
+    text-decoration: none;
+  }
+  
+  .development-info a:hover {
+    text-decoration: underline;
+  }
+  
+  body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .dark-mode-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  .dark-mode-label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+  }
+  .dark-mode-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .dark-mode-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .dark-mode-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input.dark-mode-checkbox:checked + .dark-mode-slider {
+    background-color: #2196F3;
+  }
+  input.dark-mode-checkbox:checked + .dark-mode-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  
+    nav a {
+      color: black;
+    }
+  
+    nav a:hover {
+      color: #333;
+    }
+  }
+  
