@@ -10,6 +10,21 @@ document.addEventListener('DOMContentLoaded', function() {
     lastModifiedElement.textContent = `Last modified: ${lastModifiedDate}`;
   }
 
+  function incrementVisitCount() {
+    let visitCount = localStorage.getItem('pageVisits');
+    visitCount = visitCount ? parseInt(visitCount) + 1 : 1;
+    localStorage.setItem('pageVisits', visitCount);
+    document.getElementById('visitCount').textContent = visitCount;
+  }
+  
+  window.onload = function () {
+    if (localStorage.getItem('pageVisits')) {
+      incrementVisitCount();
+    } else {
+      localStorage.setItem('pageVisits', 1);
+    }
+  }
+
   updateCurrentYear();
   updateLastModifiedDate(); 
 });
