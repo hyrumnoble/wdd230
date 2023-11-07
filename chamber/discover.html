@@ -16,41 +16,42 @@
 <body>
   <header>
     <h1>Welcome to Swakopmund Chamber of Commerce</h1>
-    <nav>
+    <div id="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div id="close-menu" onclick="toggleMenu()">X</div>  
+  </header>
+    <nav id="navMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">discover</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="join.html">join_us</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <main>
-    <aside class="sidebar">
-        <div id="visit-message"></div>
-      
-        <div class="tourism-info">
-          <h2>Tourism in Swakopmund</h2>
-          <p>Welcome to Swakopmund, a coastal city offering a variety of attractions and activities for tourists:</p>
-          <ul>
-            <li>Exploration of Namib Desert</li>
-            <li>Adventure activities (sandboarding, quad biking)</li>
-            <li>Historical sites (Swakopmund Museum, Woermannhaus)</li>
-            <li>Beach relaxation and water sports</li>
-          </ul>
-        </div>
-      </aside>
-    <section class="gallery">
-      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/278794-swakopmund-architecture.jpg" alt="Local Photo 1">
-      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/Bnb.jpeg" alt="Local Photo 1">
-      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/hotel.jpeg" alt="Local Photo 1">
-      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/swakopmund-adventure.jpg" alt="Local Photo 1">
-      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/OIP.jpeg" alt="Local Photo 1">
-      <img class="lazy-load" data-src="path_to_low_res_image.jpg" src="images/go338217.jpg" alt="Local Photo 1">
-    </section>
-  </main>
-  
-
+    </nav>   
+   <main class="main-content">
+    <div class="sidebar">
+      <div id="visit-message"></div>
+        <h2>Tourism in Swakopmund</h2>
+        <p>Welcome to Swakopmund, a coastal city offering a variety of attractions and activities for tourists:</p>
+        <ul>
+          <li>Exploration of Namib Desert</li>
+          <li>Adventure activities (sandboarding, quad biking)</li>
+          <li>Historical sites (Swakopmund Museum, Woermannhaus)</li>
+          <li>Beach relaxation and water sports</li>
+        </ul>
+  </div>
+      <div class="image-gallery">
+        <img class="lazy-load" data-src="images/278794-swakopmund-architecture.jpg" alt="Local Photo 1">
+        <img class="lazy-load" data-src="images/Bnb.jpeg"  alt="Local Photo 1">
+        <img class="lazy-load" data-src="images/hotel.jpeg" alt="Local Photo 1">
+        <img class="lazy-load" data-src="images/dsc05621.webp" alt="Local Photo 1">
+        <img class="lazy-load" data-src="images/OIP.jpeg" alt="Local Photo 1">
+        <img class="lazy-load" data-src="images/go338217.jpg" alt="Local Photo 1">
+      </div>
+    </main>
+  </div>
   <footer>
     <div class="social">
       <a href="https://facebook.com" target= "_blank">
@@ -82,6 +83,32 @@
   <script src="scripts/weather.js"></script>
 
   <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById("navMenu");
+      const closeMenu = document.getElementById('close-menu');
+
+      navMenu.classList.toggle('active');
+      closeMenu.classList.toggle('active');
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      const lazyImages = document.querySelectorAll('.lazy-load');
+
+      const lazyLoad = target => {
+        const io = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.getAttribute('data-src');
+              observer.disconnect();
+            }
+          });
+        });
+
+        io.observe(target);
+      };
+
+      lazyImages.forEach(lazyLoad);
+    });
     const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
 
     darkModeCheckbox.addEventListener('change', () => {
@@ -110,7 +137,7 @@
       });
       
       function displayMessage(message) {
-        // Replace 'message' with the message element in the sidebar
+        
         const messageElement = document.getElementById("visit-message");
         messageElement.textContent = message;
       }

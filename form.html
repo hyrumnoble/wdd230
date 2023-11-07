@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Hyrum Noble - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal">
+    <meta name="author" content="Hyrum Heber Noble">
+    <link rel="stylesheet" href="styles/form.css">
+    <meta property="og:title" content="Hyrum Noble - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.bing.com/images/search?view=detailV2&ccid=tXKoe3nB&id=743DA2BA8AB61E17B8133CC7FAC4E57850A99F8C&thid=OIP.tXKoe3nBn4tedOJyMCIT8gHaDs&mediaurl=https%3a%2f%2fdestination-swakopmund.com%2fwp-content%2fuploads%2f2017%2f07%2f1_PlatzamMeer.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.b572a87b79c19f8b5e74e272302213f2%3frik%3djJ%252bpUHjlxPrHPA%26pid%3dImgRaw%26r%3d0&exph=2448&expw=4900&q=swakopmund&simid=608022092413426048&FORM=IRPRST&ck=F60DB2C59C671865B1B10427BA69316F&selectedIndex=6&ajaxhist=0&ajaxserp=0"> <!-- Replace with your image URL -->
+    <meta property="og:url" content="https://hyrumnoble.github.io/wdd230/">
+</head>
+<body>
+  <header>
+    <img src="images/20201130_151657.webp" alt="Profile Image">
+    <h1>Hyrum Heber Noble</h1>
+  </header>
+  
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lesson03/chamber_siteplan.html">Site Plan</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+    </ul>
+  </nav>
+      
+  <main>
+    <form action="record.html" method="get" id="userForm">
+      <label for="username">Username:
+        <input type="text" id="username" name="username" required>
+      </label>
+      
+      <label for="password">Password:
+        <input type="password" id="password" name="password" required pattern="^[a-zA-Z0-9]{8,}$">
+      </label>
+      
+      <label for="confirmPassword">Confirm Password:
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </label>
+      
+      <label for="email">Email:
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+      </label>
+      
+      <label for="pageRating">Page Rating:
+        <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1">
+        <output for="pageRating" id="rangeValue">5</output>
+      </label>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  
+  <footer>
+    <p>&#169; <span id="currentYear"></span> Hyrum Heber Noble, Swakopmun/Namibia</p> 
+    <img src="images/R.jpeg" alt="country flag">
+  </footer>
+
+</body>
+</html>

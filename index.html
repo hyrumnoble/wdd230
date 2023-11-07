@@ -61,13 +61,23 @@
         <li><a href="lesson05/bom.html">BOM favourite chapters</a></li>
         <li><a href="lesson03/images/landscape.webp">WebP</a></li>
         <li><a href="lesson06/responsive-images.html">responsive-images</a></li>
+        <li><a href="lesson03/lazyload.html">lazyload</a></li>
+        <li><a href="lesson05 - Copy/bom.html">Revised BOM</a></li>
+        <li><a href="lesson06/responsive-images.html">responsive-images</a></li>
+        <li><a href="lesson06/responsive-images.html">responsive-images</a></li>
+        <li><a href="lesson06/responsive-images.html">responsive-images</a></li>
+        <li><a href="lesson06/responsive-images.html">responsive-images</a></li>
     </ul>
     </section>
 
     <section class="card">
       <h3>Information</h3>
-      <p>Weather: [Weather information]</p>
-      <p>Visits: [Number of visits]</p>
+      <h2>Weather</h2>
+        <p>Check the current weather in Swakopmund.</p>
+        <p class="wind-chill">Wind Chill: Calculating...</p>
+        <div class="weatherWidget"></div>
+      <h2>Page Visit Counter</h2>
+      <p id="visitCount">Total Visits: <span id="counter">0</span></p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55785.2013189676!2d14.526488660745546!3d-22.654632918388533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c7658ef0b44d78f%3A0xde9e043bc3383c4c!2sSwakopmund!5e0!3m2!1sen!2sna!4v1696076220068!5m2!1sen!2sna" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
@@ -80,5 +90,18 @@
 
   <script src="scripts/menu.js"></script>
   <script src="scripts/getdates.js"></script>
+  <script src="scripts/weather.js"></script>
+  <script>
+    let visitCount = localStorage.getItem('pageVisits');
+    if (visitCount) {
+    visitCount = parseInt(visitCount) + 1;
+
+    } else {
+      visitCount = 1;
+    }
+
+    localStorage.setItem('pageVisits', visitCount);
+    document.getElementById('counter').innerText = visitCount;
+  </script>
 </body>
 </html>

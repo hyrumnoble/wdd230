@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lazy Loading Images</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+    <header>
+        <h1>Lazy Loading Images</h1>
+    </header>
+    <main>
+        <div class="image-container">
+            <img data-src="images/landscape.webp" class="lazy-image" alt="Image 1">
+            <img data-src="images/554f1b0a21f8027e9027a7411a4abc2b--central-oregon-oregon-usa.jpg" class="lazy-image" alt="Image 2">
+            <img data-src="images/March-of-the-Lion-600px-400px.jpg" class="lazy-image" alt="Image 3">
+            <img data-src="images/Phoenix-4-400px-x-600px.jpg" class="lazy-image" alt="Image 4">
+            <img data-src="images/R.jpeg" class="lazy-image" alt="Image 5">
+            <img data-src="images/unnamed.jpg" class="lazy-image" alt="Image 6">
+        </div>
+    </main>
+    <footer>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/lazyload.js"></script>
+    <script>
+        document.getElementById('lastModified').innerText = document.lastModified;
+    </script>
+</body>
+</html>

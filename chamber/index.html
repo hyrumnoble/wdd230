@@ -11,19 +11,27 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="path/to/social-image.jpg">
   <meta property="og:url" content="https://www.example.com">
-  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
   <header>
     <h1>Welcome to Swakopmund Chamber of Commerce</h1>
-    <nav>
+    <div id="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div id="close-menu" onclick="toggleMenu()">X</div>  
+  </header>
+  
+  <nav id="navMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">discover</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="join.html">join_us</a></li>
       </ul>
-    </nav>
-  </header>
+  </nav>
+  
 
   <main>
     <section class="hero">
@@ -36,7 +44,7 @@
                1500px"
         src="images/hero-large.webp"
         alt="Hero Image">
-      <a href="index.html" class="cta-button" id="join-button">Join Now</a>
+      <a href="join.html" class="cta-button" id="join-button">Join Now</a>
     </section>
 
     <section class="call-to-action">
@@ -118,6 +126,13 @@
   <script src="scripts/weather.js"></script>
 
   <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById("navMenu");
+      const closeMenu = document.getElementById('close-menu');
+
+      navMenu.classList.toggle('active');
+      closeMenu.classList.toggle('active');
+    }
     const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
 
     darkModeCheckbox.addEventListener('change', () => {
