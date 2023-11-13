@@ -1,12 +1,18 @@
 // scripts/links.js
-
 const baseURL = "https://hyrumnoble.github.io/wdd230/";
-const linksURL = `${baseURL}data/links.json`;
+const linksURL = `https://raw.githubusercontent.com/hyrumnoble/wdd230/main/data/links.json`;  // Use the raw content URL
 
 async function getLinks() {
-  const response = await fetch(linksURL);
-  const data = await response.json();
-  displayLinks(data);
+  try {
+    const response = await fetch(linksURL);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    displayLinks(data);
+  } catch (error) {
+    console.error('Error fetching links:', error.message);
+  }
 }
 
 function displayLinks(weeks) {
