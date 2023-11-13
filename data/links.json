@@ -1,0 +1,62 @@
+{
+    "lessons": [
+      {
+        "lesson": "01",
+        "links": [
+          {
+            "url": "lesson01/holygrail.html",
+            "title": "Holy Layout"
+          },
+          {
+            "url": "lesson01/media-query.html",
+            "title": "Media Query"
+          },
+          {
+            "url": "lesson02/design.html",
+            "title": "Design"
+          },
+          {
+            "url": "lesson02/design-principles.html",
+            "title": "Design Principles Document"
+          },
+          {
+            "url": "https://codepen.io/hyrumnoble/pen/yLGQJMz",
+            "title": "Pseudo-Class"
+          },
+          {
+            "url": "lesson05/bom.html",
+            "title": "BOM Favorite Chapters"
+          },
+          {
+            "url": "lesson03/images/landscape.webp",
+            "title": "WebP"
+          },
+          {
+            "url": "lesson06/responsive-images.html",
+            "title": "Responsive Images"
+          },
+          {
+            "url": "lesson03/lazyload.html",
+            "title": "Lazy Load"
+          },
+          {
+            "url": "lesson05%20-%20Copy/bom.html",
+            "title": "Revised BOM"
+          },
+          {
+            "url": "form.html",
+            "title": "Form"
+          },
+          {
+            "url": "lesson09/new-ward-members.json",
+            "title": "JSON"
+          },
+          {
+            "url": "lesson09/prophets.html",
+            "title": "Prophets"
+          }
+        ]
+      }
+    ]
+  }
+  

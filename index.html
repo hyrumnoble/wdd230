@@ -49,25 +49,11 @@
         <h1>Curitiba Brazil Temple</h1>
       </div>
       <h2>WDD 230: Web Frontend Development</h2>
-    <section class="card">
-      <h3>Learning Activities</h3>
-      <ul>
-        
-        <li><a href="lesson01/holygrail.html">Holy Layout</a></li>
-        <li><a href="lesson01/media-query.html">media-query</a></li>
-        <li><a href="lesson02/design.html">design</a></li>
-        <li><a href="lesson02/design-principles.html">design Principle Document</a></li>
-        <li><a href="https://codepen.io/hyrumnoble/pen/yLGQJMz">Pseudo-Class</a></li>
-        <li><a href="lesson05/bom.html">BOM favourite chapters</a></li>
-        <li><a href="lesson03/images/landscape.webp">WebP</a></li>
-        <li><a href="lesson06/responsive-images.html">responsive-images</a></li>
-        <li><a href="lesson03/lazyload.html">lazyload</a></li>
-        <li><a href="lesson05 - Copy/bom.html">Revised BOM</a></li>
-        <li><a href="form.html">form</a></li>
-        <li><a href="lesson09/new-ward-members.json">JSON</a></li>
-        <li><a href="lesson09/prophets.html">Prophets</a></li>
-    </ul>
-    </section>
+      <section class="card">
+        <h3>Learning Activities</h3>
+        <div id="links-container"></div>
+      </section>
+      
 
     <section class="card">
       <h3>Information</h3>
@@ -90,6 +76,7 @@
   <script src="scripts/menu.js"></script>
   <script src="scripts/getdates.js"></script>
   <script src="scripts/weather.js"></script>
+  <script src="scripts/links.js"></script>
   <script>
     let visitCount = localStorage.getItem('pageVisits');
     if (visitCount) {
