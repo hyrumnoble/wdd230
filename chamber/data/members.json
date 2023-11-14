@@ -4,7 +4,7 @@
         "name": "FNB",
         "address": "123 Main St, Swakopmund",
         "phone": "555-1234",
-        "website": "https://www.company1.com",
+        "website": "https://www.fnbnamibia.com.na/",
         "image": "company1.jpg",
         "membershipLevel": "Gold"
       },
@@ -12,7 +12,7 @@
         "name": "TELECOM",
         "address": "456 Oak St, Swakopmund",
         "phone": "555-5678",
-        "website": "https://www.company2.com",
+        "website": "https://telecom.na/",
         "image": "company2.jpg",
         "membershipLevel": "Silver"
       },
@@ -20,7 +20,7 @@
         "name": "MTC",
         "address": "789 Pine St, Swakopmund",
         "phone": "555-9012",
-        "website": "https://www.company3.com",
+        "website": "https://mtc.com.na/",
         "image": "company3.jpg",
         "membershipLevel": "Bronze"
       },
@@ -28,7 +28,7 @@
         "name": "SANLAM",
         "address": "321 Cedar St, Swakopmund",
         "phone": "555-3456",
-        "website": "https://www.company4.com",
+        "website": "https://www.sanlam.com/",
         "image": "company4.jpg",
         "membershipLevel": "Gold"
       },
@@ -36,7 +36,7 @@
         "name": "BMW",
         "address": "321 Cedar St, Swakopmund",
         "phone": "555-3456",
-        "website": "https://www.company4.com",
+        "website": "https://www.bmw.co.za/en/index.html",
         "image": "company8.jpg",
         "membershipLevel": "Gold"
       },
@@ -44,7 +44,7 @@
         "name": "Ned Bank",
         "address": "654 Birch St, Swakopmund",
         "phone": "555-4321",
-        "website": "https://www.company6.com",
+        "website": "https://www.nedbank.com.na/content/nedbank-namibia/desktop/na/en/personal.html",
         "image": "company5.jpg",
         "membershipLevel": "Silver"
       },
@@ -60,7 +60,7 @@
         "name": "OutSurance",
         "address": "123 Elm St, Swakopmund",
         "phone": "555-2109",
-        "website": "https://www.company8.com",
+        "website": "https://www.outsurance.co.za/",
         "image": "company7.jpg",
         "membershipLevel": "NP"
       }
