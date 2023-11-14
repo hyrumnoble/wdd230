@@ -35,34 +35,43 @@
 
   <main>
     <section id="about">
-        <img src="images/c47405_c0c5eab73c1e4e93b497aeb3ee260ef8~mv2.webp" alt="image for homepage">
-        <h2>membership-benefits</h2>
-        <p1>NP Membership:</p1>
-        <ul1>
-            <li>Access to networking events.</li>
-            <li>fees for training sessions.</li> 
-            <li>Inclusion in the business directory.</li>
-        </ul1>
-        <p2>Bronze Membership: </p2>
-        <ul2>
-            <li>All NP Membership benefits.</li>
-            <li>Featured advertisement on the Chamber's website.</li>
-            <li>Priority access to Chamber events.</li>
-        </ul2>    
-        <p3>Silver Membership:</p3>
-        <ul3>
-            <li>All Bronze Membership benefits.</li>
-            <li>Dedicated support for business development.</li>
-            <li>Access to exclusive workshops and seminars.</li>
-        </ul3> 
-        <p4>Gold Membership:</p4>
-        <ul4>            
-            <li>All Silver Membership benefits.</li>
-            <li>Premium advertisement placement on the Chamber's website.</li>
-            <li>Exclusive sponsorship opportunities for events.</li>
-        </ul4> 
-        <h3>Membership form</h3>
-        <form>
+      <h2>Membership Benefits</h2>
+        <div class="membership-benefits">
+          <div id="np-membership">
+            <h3>NP Membership</h3>
+            <ul>
+              <li>Access to networking events.</li>
+              <li>Fees for training sessions.</li>
+              <li>Inclusion in the business directory.</li>
+            </ul>
+          </div>
+          <div id="bronze-membership">
+            <h3>Bronze Membership</h3>
+            <ul>
+              <li>All NP Membership benefits.</li>
+              <li>Featured advertisement on the Chamber's website.</li>
+              <li>Priority access to Chamber events.</li>
+            </ul>
+          </div>
+          <div id="silver-membership">
+            <h3>Silver Membership</h3>
+            <ul>
+              <li>All Bronze Membership benefits.</li>
+              <li>Dedicated support for business development.</li>
+              <li>Access to exclusive workshops and seminars.</li>
+            </ul>
+          </div>
+          <div id="gold-membership">
+            <h3>Gold Membership</h3>
+            <ul>
+              <li>All Silver Membership benefits.</li>
+              <li>Premium advertisement placement on the Chamber's website.</li>
+              <li>Exclusive sponsorship opportunities for events.</li>
+            </ul>
+          </div> 
+        </div>    
+        <form id="membershipForm">
+          <h3>Membership form</h3>
                 <label for="firstName">Applicant's First Name</label>
                 <input type="text" id="firstName" name="firstName" required>
   
@@ -96,7 +105,7 @@
   
                 <button type="submit">Submit</button>
            </form>
-    </section>    
+  </section>    
     <div id="confirmationMessage" style="display: none;">
         <h2>Thank You!</h2>
         <p>Your form has been submitted.</p>
@@ -137,8 +146,9 @@
   <script>
     document.getElementById('membershipForm').addEventListener('submit', function(event) {
       event.preventDefault();
-    document.getElementById('confirmationMessage').style.display = 'block';
+      document.getElementById('confirmationMessage').style.display = 'block';
     });
+
     function toggleMenu() {
       const navMenu = document.getElementById("navMenu");
       const closeMenu = document.getElementById('close-menu');
@@ -146,6 +156,7 @@
       navMenu.classList.toggle('active');
       closeMenu.classList.toggle('active');
     }
+
     const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
 
     darkModeCheckbox.addEventListener('change', () => {
