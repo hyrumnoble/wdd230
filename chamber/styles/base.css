@@ -329,6 +329,45 @@ input.dark-mode-checkbox:checked + .dark-mode-slider:before {
   background-color: #9CC5A1;
 }
 
+#members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.member-card,
+.member-list-item {
+  border: 1px solid #0D1B2A;
+  background-color: #415A77;
+  padding: 10px;
+  margin: 10px;
+}
+#toggle-view-button{
+  background-color: #415A77;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#toggle-view-button :hover{
+  background-color: #9CC5A1;
+}
+/* Grid View Styles */
+.grid-view .member-card {
+  width: 30%; /* Adjust the width as needed */
+  box-sizing: border-box;
+}
+
+/* List View Styles */
+.list-view .member-list-item {
+  width: 100%; /* Takes full width of the container */
+  box-sizing: border-box;
+}
+
 
 .main-content {
   display: flex;
@@ -442,5 +481,11 @@ input.dark-mode-checkbox:checked + .dark-mode-slider:before {
   }
   .image-gallery img:hover {
     transform: scale(1.1);
+  }
+  #members-container {
+    flex-direction: column;
+  }
+  .grid-view .member-card {
+    width: 100%; /* Full width for grid items on small screens */
   }
 }
