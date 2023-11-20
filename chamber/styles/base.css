@@ -220,6 +220,26 @@ footer {
   text-decoration: underline;
 }
 
+.banner {
+  display: none;
+  background-color: #415A77;
+  color: #6C0E23;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.banner p {
+  margin: 0;
+}
+
+#closeBanner {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
 body.dark-mode .sidebar #about{
   background-color: black;
   color: white;
