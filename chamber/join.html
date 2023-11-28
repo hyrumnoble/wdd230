@@ -31,12 +31,13 @@
         <li><a href="join.html">join_us</a></li>
         <li><a href="directory.html">Directory</a></li>
       </ul>
+      <img src="images/moon.png" id="icon" onclick="toggleDarkMode()" alt="moon">
   </nav>
   
 
   <main>
+    <div id="text"><h2>Membership Benefits</h2></div>
     <section id="about">
-      <h2>Membership Benefits</h2>
         <div class="membership-benefits">
           <div id="np-membership">
             <h3>NP Membership</h3>
@@ -71,42 +72,42 @@
             </ul>
           </div> 
         </div>    
-        <form id="membershipForm">
-          <h3>Membership form</h3>
-                <label for="firstName">Applicant's First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
-  
-                <label for="lastName">Applicant's Last Name</label>
-                <input type="text" id="lastName" name="lastName" required>
-  
-                <label for="title">Applicant's Title/Position</label>
-                <input type="text" id="title" name="title" pattern="[a-zA-Z\s-]{7,}" required>
-  
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="example@example.com" required>
-  
-                <label for="phone">Mobile Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-  
-                <label for="orgName">Business/Organization Name</label>
-                <input type="text" id="orgName" name="orgName" required>
-  
-                <label for="membershipLevel">Membership Level</label>
-                <select id="membershipLevel" name="membershipLevel">
-                    <option value="NP">NP Membership</option>
-                    <option value="Bronze">Bronze Membership</option>
-                    <option value="Silver">Silver Membership</option>
-                    <option value="Gold">Gold Membership</option>
-                </select>
-  
-                <label for="orgDescription">Business/Organization Description</label>
-                <textarea id="orgDescription" name="orgDescription"></textarea>
-  
-                <input type="hidden" id="timestamp" name="timestamp" value="Current Date and Time">
-  
-                <button type="submit">Submit</button>
-           </form>
-  </section>    
+    </section>
+    <form id="membershipForm">
+      <h3>Membership form</h3>
+            <label for="firstName">Applicant's First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Applicant's Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="title">Applicant's Title/Position</label>
+            <input type="text" id="title" name="title" pattern="[a-zA-Z\s-]{7,}" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+            <label for="phone">Mobile Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="orgName">Business/Organization Name</label>
+            <input type="text" id="orgName" name="orgName" required>
+
+            <label for="membershipLevel">Membership Level</label>
+            <select id="membershipLevel" name="membershipLevel">
+                <option value="NP">NP Membership</option>
+                <option value="Bronze">Bronze Membership</option>
+                <option value="Silver">Silver Membership</option>
+                <option value="Gold">Gold Membership</option>
+            </select>
+
+            <label for="orgDescription">Business/Organization Description</label>
+            <textarea id="orgDescription" name="orgDescription"></textarea>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="Current Date and Time">
+
+            <button type="submit">Submit</button>
+       </form>    
     <div id="confirmationMessage" style="display: none;">
         <h2>Thank You!</h2>
         <p>Your form has been submitted.</p>
@@ -135,12 +136,6 @@
       <p><a href="../lesson03/chamber_siteplan.html">Site Plan</a></p>
     </div>
   </footer>
-  <div class="dark-mode-switch">
-    <label class="dark-mode-label">
-      <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox">
-      <span class="dark-mode-slider"></span>
-    </label>
-  </div>
   <script src="scripts/getdates.js"></script>
   <script src="scripts/weather.js"></script>
 
@@ -158,11 +153,18 @@
       closeMenu.classList.toggle('active');
     }
 
-    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
-
-    darkModeCheckbox.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode', darkModeCheckbox.checked);
-    });
+    function toggleDarkMode() {
+      const body = document.body;
+      const icon = document.getElementById("icon");
+  
+      body.classList.toggle("dark-mode");
+  
+      if (body.classList.contains("dark-mode")) {
+        icon.src = "images/sun.png";
+      } else {
+        icon.src = "images/moon.png";
+      }
+    }
   </script>
 
 </body>

@@ -30,9 +30,10 @@
         <li><a href="join.html">join_us</a></li>
         <li><a href="directory.html">Directory</a></li>
       </ul>
+      <img src="images/moon.png" id="icon" onclick="toggleDarkMode()" alt="moon">
     </nav>   
    <main class="main-content">
-    <div class="sidebar">
+    <aside class="sidebar">
       <div id="visit-message"></div>
         <h2>Tourism in Swakopmund</h2>
         <p>Welcome to Swakopmund, a coastal city offering a variety of attractions and activities for tourists:</p>
@@ -42,14 +43,55 @@
           <li>Historical sites (Swakopmund Museum, Woermannhaus)</li>
           <li>Beach relaxation and water sports</li>
         </ul>
-  </div>
+      <div id="side-content1">
+        <h2>What to know</h2>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Information</th>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>Namibia</td>
+          </tr>
+          <tr>
+            <td>Region</td>
+            <td>Erongo</td>
+          </tr>
+          <tr>
+            <td>Population</td>
+            <td>Approximately 44,725</td>
+          </tr>
+          <tr>
+            <td>Climate</td>
+            <td>Desert climate, cool temperatures</td>
+          </tr>
+          <tr>
+            <td>Attractions</td>
+            <td>Beaches, German colonial architecture, adventure activities</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <h2>Map of Swakopmund</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55785.2013189676!2d14.526488660745546!3d-22.654632918388533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c7658ef0b44d78f%3A0xde9e043bc3383c4c!2sSwakopmund!5e0!3m2!1sen!2sna!4v1696076220068!5m2!1sen!2sna" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="cta-message">
+        <p>Come and join us for an unforgettable experience!</p>
+        <a href="join.html">Become a Member</a>
+      </div>
+    </aside>
       <div class="image-gallery">
-        <img class="lazy-load" data-src="images/278794-swakopmund-architecture.jpg" alt="Local Photo 1">
-        <img class="lazy-load" data-src="images/Bnb.jpeg"  alt="Local Photo 2">
-        <img class="lazy-load" data-src="images/hotel.jpeg" alt="Local Photo 3">
-        <img class="lazy-load" data-src="images/dsc05621.webp" alt="Local Photo 4">
-        <img class="lazy-load" data-src="images/OIP.jpeg" alt="Local Photo 5">
-        <img class="lazy-load" data-src="images/go338217.jpg" alt="Local Photo 6">
+        <h2>Images taken all around Swakopmund</h2>
+        <img src="images/OIP.jpeg" alt="bikes" loading="lazy" width="500" height="300">
+        <img src="images/278794-swakopmund-architecture.jpg" alt="Swakop hotel" loading="lazy" width="500" height="300">
+        <img src="images/Bnb.jpeg" alt="Bnb" loading="lazy" width="500" height="300">
+        <img src="images/hotel.jpeg" alt="Hotel" loading="lazy" width="500" height="300">
+        <img src="images/dsc05621.webp" alt="dsc" loading="lazy" width="500" height="300">
+        <img src="images/go338217.jpg" alt="go" loading="lazy" width="500" height="300">
+        <img src="images/636.jpg" alt="636" loading="lazy" width="500" height="300">
+        <img src="images/608136ff5b9a362aac6866fa_swakopmund-p-1080.jpeg" alt="601" loading="lazy" width="500" height="300">
+        <img src="images/401800a.jpg" alt="401" loading="lazy" width="500" height="300">
       </div>
     </main>
   <footer>
@@ -73,12 +115,6 @@
       <p><a href="../lesson03/chamber_siteplan.html">Site Plan</a></p>
     </div>
   </footer>
-  <div class="dark-mode-switch">
-    <label class="dark-mode-label">
-      <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox">
-      <span class="dark-mode-slider"></span>
-    </label>
-  </div>
   <script src="scripts/getdates.js"></script>
   <script src="scripts/weather.js"></script>
 
@@ -90,30 +126,18 @@
       navMenu.classList.toggle('active');
       closeMenu.classList.toggle('active');
     }
-    document.addEventListener("DOMContentLoaded", function() {
-      const lazyImages = document.querySelectorAll('.lazy-load');
-
-      const lazyLoad = target => {
-        const io = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-              img.src = img.getAttribute('data-src');
-              observer.disconnect();
-            }
-          });
-        });
-
-        io.observe(target);
-      };
-
-      lazyImages.forEach(lazyLoad);
-    });
-    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
-
-    darkModeCheckbox.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode', darkModeCheckbox.checked);
-    });
+    function toggleDarkMode() {
+      const body = document.body;
+      const icon = document.getElementById("icon");
+  
+      body.classList.toggle("dark-mode");
+  
+      if (body.classList.contains("dark-mode")) {
+        icon.src = "images/sun.png";
+      } else {
+        icon.src = "images/moon.png";
+      }
+    }
     document.addEventListener("DOMContentLoaded", function () {
         const lastVisit = localStorage.getItem("lastVisit");
         const currentDate = Date.now();

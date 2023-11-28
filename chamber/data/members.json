@@ -1,67 +1,68 @@
 {
     "members": [
       {
+        "image": "../images/FNB.jpeg",
         "name": "FNB",
         "address": "123 Main St, Swakopmund",
         "phone": "555-1234",
         "website": "https://www.fnbnamibia.com.na/",
-        "image": "company1.jpg",
         "membershipLevel": "Gold"
       },
       {
+        "image": "../images/Telecom-Namibia-logo.png",
         "name": "TELECOM",
         "address": "456 Oak St, Swakopmund",
         "phone": "555-5678",
         "website": "https://telecom.na/",
-        "image": "company2.jpg",
         "membershipLevel": "Silver"
       },
       {
+        "image": "../images/Mtc_Namibia_Logo.svg.png",
         "name": "MTC",
         "address": "789 Pine St, Swakopmund",
         "phone": "555-9012",
         "website": "https://mtc.com.na/",
-        "image": "company3.jpg",
         "membershipLevel": "Bronze"
       },
       {
+        "image": "../images/sanlam.jpeg",
         "name": "SANLAM",
         "address": "321 Cedar St, Swakopmund",
         "phone": "555-3456",
         "website": "https://www.sanlam.com/",
-        "image": "company4.jpg",
+        
         "membershipLevel": "Gold"
       },
       {
+        "image": "../images/BMW.jpeg",
         "name": "BMW",
         "address": "321 Cedar St, Swakopmund",
         "phone": "555-3456",
         "website": "https://www.bmw.co.za/en/index.html",
-        "image": "company8.jpg",
         "membershipLevel": "Gold"
       },
       {
+        "image": "../images/nedbank-logo_news_25049_20918.jpg",
         "name": "Ned Bank",
         "address": "654 Birch St, Swakopmund",
         "phone": "555-4321",
         "website": "https://www.nedbank.com.na/content/nedbank-namibia/desktop/na/en/personal.html",
-        "image": "company5.jpg",
         "membershipLevel": "Silver"
       },
       {
+        "image": "../images/tnmobile_logo.jpg",
         "name": "TN1",
         "address": "789 Pine St, Swakopmund",
         "phone": "555-8765",
         "website": "https://www.company7.com",
-        "image": "company6.jpg",
         "membershipLevel": "Bronze"
       },
       {
+        "image": "../images/OUTsurance-Logo.webp",
         "name": "OutSurance",
         "address": "123 Elm St, Swakopmund",
         "phone": "555-2109",
         "website": "https://www.outsurance.co.za/",
-        "image": "company7.jpg",
         "membershipLevel": "NP"
       }
     ]

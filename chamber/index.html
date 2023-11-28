@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
+  <div id="chamberBanner" class="banner">
+    <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+    <span id="closeBanner" onclick="closeBanner()">❌</span>
+  </div>
   <header>
     <h1>Welcome to Swakopmund Chamber of Commerce</h1>
     <div id="hamburger-menu" onclick="toggleMenu()">
@@ -31,6 +35,7 @@
         <li><a href="join.html">join_us</a></li>
         <li><a href="directory.html">Directory</a></li>
       </ul>
+      <img src="images/moon.png" id="icon" onclick="toggleDarkMode()" alt="moon">
   </nav>
   
 
@@ -59,11 +64,6 @@
         <p>Join us for an exciting day at the FNB Trackday event. Experience thrilling races and engage with fellow motorsport enthusiasts.</p>
         <a href="https://www.raceentry.com/fnb-fall-fun-fest-runwalk/race-information" class="cta-button">Join Us</a>
       </section>
-      <div id="chamberBanner" class="banner">
-        <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
-        <span id="closeBanner" onclick="closeBanner()">❌</span>
-      </div>
-
       <section class="weather-card">
         <h2>Weather</h2>
         <p>Check the current weather in Swakopmund.</p>
@@ -120,12 +120,6 @@
       <p><a href="../lesson03/chamber_siteplan.html">Site Plan</a></p>
     </div>
   </footer>
-  <div class="dark-mode-switch">
-    <label class="dark-mode-label">
-      <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox">
-      <span class="dark-mode-slider"></span>
-    </label>
-  </div>
   <script src="scripts/getdates.js"></script>
   <script src="scripts/weather.js"></script>
   <script src="scripts/banner.js"></script>
@@ -134,16 +128,25 @@
     function toggleMenu() {
       const navMenu = document.getElementById("navMenu");
       const closeMenu = document.getElementById('close-menu');
-
+  
       navMenu.classList.toggle('active');
       closeMenu.classList.toggle('active');
     }
-    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
-
-    darkModeCheckbox.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode', darkModeCheckbox.checked);
-    });
+  
+    function toggleDarkMode() {
+      const body = document.body;
+      const icon = document.getElementById("icon");
+  
+      body.classList.toggle("dark-mode");
+  
+      if (body.classList.contains("dark-mode")) {
+        icon.src = "images/sun.png";
+      } else {
+        icon.src = "images/moon.png";
+      }
+    }
   </script>
+  
 
 </body>
 </html>
