@@ -437,6 +437,11 @@ form button {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.membership-price {
+  font-weight: bold;
+  color: #3498db; 
+  margin-top: 10px;
+}
 
 #np-membership h3{
   background-color: #F4F27E;
@@ -622,24 +627,15 @@ button:hover {
   .container {
     grid-template-columns: 1fr; /* Single column layout for mobile view */
   }
-  .sidebar {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    margin: 20px;
-  }
+
   .main-content {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    flex-direction: column;
+  }
+  .sidebar,
+  .image-gallery {
+    width: 100%;
   }
 
-  .image-gallery img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s;
-  }
-  .image-gallery img:hover {
-    transform: scale(1.1);
-  }
   #members-container {
     flex-direction: column;
   }
