@@ -1,0 +1,85 @@
+{
+    "rentals": [
+      {
+        "type": "Honda Metropolitan (49cc)",
+        "maxPersons": 1,
+        "halfDayPrice": 20,
+        "fullDayPrice": 30,
+        "image": "images/Honda Metropolitan (49cc).webp"
+      },
+      {
+        "type": "Honda Dio (110cc)",
+        "maxPersons": 2,
+        "halfDayPrice": 30,
+        "fullDayPrice": 40,
+        "image": "images/Honda Dio (110cc).webp"
+      },
+      {
+        "type": "Honda PCX150 (149cc)",
+        "maxPersons": 2,
+        "halfDayPrice": 40,
+        "fullDayPrice": 50,
+        "image": "images/Honda PCX150 (149cc).webp"
+      },
+      {
+        "type": "Honda Pioneer ATV",
+        "maxPersons": 4,
+        "halfDayPrice": 50,
+        "fullDayPrice": 70,
+        "image": "images/C.webp"
+      },
+      {
+        "type": "Jeep Wrangler - 4 door with A/C",
+        "maxPersons": 5,
+        "halfDayPrice": 70,
+        "fullDayPrice": 100,
+        "image": "images/about.webp"
+      },
+      {
+        "type": "Jeep Wrangler - 2 door",
+        "maxPersons": 4,
+        "halfDayPrice": 60,
+        "fullDayPrice": 85,
+        "image": "images/OIP.jpg"
+      }
+    ],
+    "maxPricing": {
+      "reservations": {
+        "halfDay": {
+          "Honda Metropolitan (49cc)": 25,
+          "Honda Dio (110cc)": 35,
+          "Honda PCX150 (149cc)": 45,
+          "Honda Pioneer ATV": 60,
+          "Jeep Wrangler - 4 door with A/C": 85,
+          "Jeep Wrangler - 2 door": 70
+        },
+        "fullDay": {
+          "Honda Metropolitan (49cc)": 35,
+          "Honda Dio (110cc)": 45,
+          "Honda PCX150 (149cc)": 55,
+          "Honda Pioneer ATV": 80,
+          "Jeep Wrangler - 4 door with A/C": 125,
+          "Jeep Wrangler - 2 door": 90
+        }
+      },
+      "walkIn": {
+        "halfDay": {
+          "Honda Metropolitan (49cc)": 30,
+          "Honda Dio (110cc)": 40,
+          "Honda PCX150 (149cc)": 50,
+          "Honda Pioneer ATV": 70,
+          "Jeep Wrangler - 4 door with A/C": 85,
+          "Jeep Wrangler - 2 door": 70
+        },
+        "fullDay": {
+          "Honda Metropolitan (49cc)": 40,
+          "Honda Dio (110cc)": 50,
+          "Honda PCX150 (149cc)": 60,
+          "Honda Pioneer ATV": 80,
+          "Jeep Wrangler - 4 door with A/C": 125,
+          "Jeep Wrangler - 2 door": 90
+        }
+      }
+    }
+  }
+  

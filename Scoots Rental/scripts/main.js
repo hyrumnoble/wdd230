@@ -65,4 +65,27 @@
         format: 'LT'
     });
 })(jQuery);
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('data/rental.json')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('rentalTable').getElementsByTagName('tbody')[0];
+
+            data.rentals.forEach(rental => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = rental.type;
+                row.insertCell(1).textContent = rental.maxPersons;
+                row.insertCell(2).textContent = `$${rental.halfDayPrice}`;
+                row.insertCell(3).textContent = `$${rental.fullDayPrice}`;
+
+                // Add an image cell
+                const imgCell = row.insertCell(4);
+                const img = document.createElement('img');
+                img.src = rental.image;
+                img.alt = rental.type;
+                imgCell.appendChild(img);
+            });
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+});
 
