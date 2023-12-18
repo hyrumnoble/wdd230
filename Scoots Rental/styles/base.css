@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+html ::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+html ::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb{
+  background: #00CED1;
+  border-radius: 5rem;
+}
 body {
   color: #666;
   font-family: 'Raleway', sans-serif;
@@ -87,9 +99,7 @@ h6 {
   padding-top: 10px;
 }
 
-/* ================================================= */
-/* ---------------- Nav Header CSS ----------------- */
-/* ================================================= */
+
 
 #header {
   background: #222222;
@@ -233,9 +243,7 @@ h6 {
   }
 }
 
-/* ================================================= */
-/* --------------- Header Slider CSS --------------- */
-/* ================================================= */
+
 
 #header-bottom {
   position: relative;
@@ -352,9 +360,7 @@ h6 {
   width: 100%;
 }
 
-/* ================================================= */
-/* ---------------- Welcome Section ---------------- */
-/* ================================================= */
+
 
 #welcome {
   position: relative;
@@ -433,9 +439,7 @@ h6 {
   background: #00CED1;
 }
 
-/* ================================================= */
-/* -------------- Section Header Style ------------- */
-/* ================================================= */
+
 
 .section-header {
   position: relative;
